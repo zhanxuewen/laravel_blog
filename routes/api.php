@@ -11,3 +11,5 @@
 |
 */
 
+Route::any('/store', ['uses' => 'WeddingController@store']);
+Route::any('/commitList', ['uses' => 'WeddingController@getCommitList']);

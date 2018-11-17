@@ -33,4 +33,10 @@ class Controller extends BaseController
     {
         return $this->jsonMessage($msg, 500);
     }
+
+    public function success($data = null)
+    {
+        $return = ['errcode' => 0, 'errstr' => "", 'data' => is_null($data) ? "操作成功" : $data];
+        return response()->json($return, 200, ['Content-type' => 'application/json; charset=utf-8']);
+    }
 }
